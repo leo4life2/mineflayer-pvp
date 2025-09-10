@@ -1,6 +1,7 @@
 import { Bot } from "mineflayer";
 import { Movements, Pathfinder, goals } from "mineflayer-pathfinder";
-import { Entity } from "prismarine-entity";
+// Reference the Entity type via Bot to avoid duplicate prismarine-entity instances
+type Entity = import("mineflayer").Bot["entity"];
 import { MaxDamageOffset, TimingSolver } from "./TimingSolver";
 import { TaskQueue } from 'mineflayer-utils';
 
